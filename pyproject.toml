@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bpythonsss"
 description = "Simple calculator API hosted on APIMATIC"
-version = "3.3.3"
+version = "3.21.2"
 readme = "README.md"
 keywords = []
 authors = []
