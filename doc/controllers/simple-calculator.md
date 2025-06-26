@@ -9,20 +9,22 @@ simple_calculator_controller = client.simple_calculator
 `SimpleCalculatorController`
 
 
-# Get Calculate
+# Calculate
 
 Calculates the expression using the specified operation.
 
 ```python
-def get_calculate(self,
-                 options=dict())
+def calculate(self,
+             operation,
+             x,
+             y)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `operation` | [`OperationType`](../../doc/models/operation-type.md) | Template, Required | The operator to apply on the variables |
+| `operation` | [`OperationTypeEnum`](../../doc/models/operation-type-enum.md) | Template, Required | The operator to apply on the variables |
 | `x` | `float` | Query, Required | The LHS value |
 | `y` | `float` | Query, Required | The RHS value |
 
@@ -33,12 +35,17 @@ def get_calculate(self,
 ## Example Usage
 
 ```python
-collect = {
-    'operation': OperationType.MULTIPLY,
-    'x': 222.14,
-    'y': 165.14
-}
-result = simple_calculator_controller.get_calculate(collect)
+operation = OperationTypeEnum.SUM
+
+x = 222.14
+
+y = 165.14
+
+result = simple_calculator_controller.calculate(
+    operation,
+    x,
+    y
+)
 print(result)
 ```
 

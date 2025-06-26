@@ -5,7 +5,6 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| environment | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
 | http_client_instance | `HttpClient` | The Http Client passed from the sdk user for making requests |
 | override_http_client_configuration | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
 | http_call_back | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
@@ -18,12 +17,12 @@ The following parameters are configurable for the API Client:
 The API client can be initialized as follows:
 
 ```python
-client = ApimaticcalculatorClient(
+client = ApimaticcalculatorzipClient(
     environment=Environment.PRODUCTION
 )
 ```
 
-## APIMATIC Calculator Client
+## APIMATIC Calculator - zip Client
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 
