@@ -39,5 +39,6 @@ collect = {
     'y': 165.14
 }
 result = simple_calculator_controller.get_calculate(collect)
+print(result)
 ```
 
